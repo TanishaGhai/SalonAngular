@@ -1,0 +1,40 @@
+<div class="card">
+    <div class="card-body">
+            <div class="row">
+                <div class="col-md-2">filter</div>
+                <div class="col-md-4"><input type="text" 
+                    [(ngModel)]='listFilter'></div>
+            </div>
+            <br>
+            <div class="table-responsive">
+                <table class="table" *ngIf='filteredCusromers && filteredCusromers.length'>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>BDay</th>
+                            <th>Aniversary</th>
+                            <th>Delete</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor='let customer of filteredCusromers'> 
+                            <td width="1%">
+                                <img [src]='customer.customerImage'>
+                            </td>
+                            <td width="10%"><a [routerLink]="['/customers',customer.customerName]">{{customer.customerName}}</a></td>
+                            <td width="10%">{{customer.customerPhone | Phone}}</td>
+                            <td width="10%">{{customer.customerBDay | date}}</td>
+                            <td width="10%">{{customer.customerAni | date}}</td>
+                            <td width="10%"><input type="button" value="Delete" class='btn btn-link cusbutton'></td>
+                            <td width="10%"><input type="button" value="Edit" class='btn btn-link cusbutton'></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+thead
+{
+    font-weight: bold;
+   
+}
+
+td
+{
+    font-size: 15px;
+    margin: 5px;
+    border: 1px;
+    border-color: black;
+    padding: 1px
+}
+
+table
+{
+    border: 1px
+ 
+}
+
+tr
+{
+    height: 1px
+}
+.cusbutton{
+    padding: 1px !important;
+    vertical-align: top !important;
+}
